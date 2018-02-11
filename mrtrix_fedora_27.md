@@ -7,7 +7,12 @@
 
 ## 2. Install qt libraries
 
-    dnf -y install qt5-* --skip-broken
+    dnf -y install qt* --skip-broken
+    
+Probably you'll have to export the environment variables for configuring the software
+
+    export QMAKE=qmake-qt5
+    export MOC=moc-qt5
 
 ## 3. Clone MRtrix repo
 	git clone https://github.com/MRtrix3/mrtrix3.git

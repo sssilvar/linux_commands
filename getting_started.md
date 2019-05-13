@@ -5,5 +5,5 @@ It is important to have:
 
 After installing those you must install the necessary dependencies using pip:
 ```
-pip3 install --user pandas numpy sklearn scikit-image requests matplotlib seaborn PySide2 dipy nibabel nilearn
+pip3 install --user pandas numpy sklearn scikit-image requests matplotlib seaborn PySide2 dipy nibabel nilearn tables sqlalchemy
 ```

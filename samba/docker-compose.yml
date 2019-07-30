@@ -8,6 +8,10 @@ services:
       -g "map to guest = Bad User"
       -w "WORKGROUP"
       -s "myshare;/mount/myshare;yes;no;yes;all;none;;comment1"
+      -g "guest ok = yes"
+      -g "read only = no"
+      -g "directory mask = 777"
+      -g "force user = root"
       -g "bind interfaces only = yes"
       -g "interfaces = lo enp*"
     environment:

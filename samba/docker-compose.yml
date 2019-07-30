@@ -1,0 +1,23 @@
+version: '3.4'
+services:
+  samba:
+    image: dperson/samba:latest
+    command: >
+      -n
+      -S
+      -g "map to guest = Bad User"
+      -w "WORKGROUP"
+      -s "myshare;/mount/myshare;yes;no;yes;all;none;;comment1"
+      -g "bind interfaces only = yes"
+      -g "interfaces = lo enp*"
+    environment:
+      - USERID=1000
+      - GROUPID=1000
+      - TZ=CST6CDT
+    volumes:
+      - /smb/:/mount/myshare
+    network_mode: host
+    ports:
+      - "139:139"
+      - "445:445"
+    restart: unless-stopped

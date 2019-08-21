@@ -17,5 +17,7 @@ proxy_password=your_password
 ```
 
 ## SSH
+```
 ProxyCommand /usr/bin/corkscrew proxy_server 8080 %h %p /home/ssilvari/.ssh/auth
 ProxyCommand=socat - PROXY:proxy_server:%h:%p,proxyport=8080,proxyauth=username:password
+```

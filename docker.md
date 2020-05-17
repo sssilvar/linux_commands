@@ -15,3 +15,12 @@ Solution
 sudo mkdir /sys/fs/cgroup/systemd
 sudo mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd
 ```
+
+# Docker out of space
+Move the image default directory to a partition/folder with more space:
+```bash
+sudo service docker stop
+sudo mv /var/lib/docker /new_path/docker
+sudo ln -s /new_path/docker /var/lib/docker  # Creates link
+service docker start
+```

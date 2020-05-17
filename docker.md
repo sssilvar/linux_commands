@@ -24,3 +24,8 @@ sudo mv /var/lib/docker /new_path/docker
 sudo ln -s /new_path/docker /var/lib/docker  # Creates link
 service docker start
 ```
+
+# Clean slate (delete all the images and containers)
+```bash
+docker system prune
+```

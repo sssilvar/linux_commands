@@ -1,4 +1,13 @@
-# Some important thiing about Docker
+# Some important things about Docker
+
+## Docker compose
+Check the installation guide here: https://docs.docker.com/compose/install/ 
+For linux:
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
 ## Docker in fedora 31
 You may need a correction in the grub file using:
 
